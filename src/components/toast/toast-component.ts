@@ -78,10 +78,11 @@ export class ToastCmp implements AfterViewInit {
   }
 
   ionViewDidEnter() {
-    const { activeElement }: any = document;
-    if (activeElement) {
-      activeElement.blur();
-    }
+    // enli: disabled because toast causes active inputs to lose focus
+    // const { activeElement }: any = document;
+    // if (activeElement) {
+    //   activeElement.blur();
+    // }
 
     let focusableEle = this._elementRef.nativeElement.querySelector('button');
 
